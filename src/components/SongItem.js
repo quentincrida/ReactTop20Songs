@@ -13,3 +13,19 @@ const SongItem = (props) => {
   )
 }
 export default SongItem;
+
+
+//
+// if(!props.country) return null;
+// return (
+//   <section>
+//   <h3>
+//   {props.country.name}
+//   </h3>
+//   <p>Capital: {props.country.capital}</p>
+//   <p>Population: {props.country.population}</p>
+//   </section>
+// )
+// }
+//
+// export default CountryDetail;

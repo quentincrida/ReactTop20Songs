@@ -2,10 +2,10 @@ import React, {Fragment} from 'react';
 import SongItem from './SongItem';
 
 
-function Songlist (props){
+const Songlist = (props) =>{
   const songs = props.data.map((song, index) => {
     return (
-      <SongItem title = {song.title.label}key={index}>{song.title}</SongItem>
+      <SongItem title = {song.title.label} key={index}>{song.title}</SongItem>
     )
   })
   return (
