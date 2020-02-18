@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 import SongItem from '../components/SongItem';
 import Songlist from '../components/Songlist';
 
 
 
-class SongContainer extends React.Component {
+class SongContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
       songs: []
-      
+
     };
 
     }
@@ -25,13 +25,11 @@ class SongContainer extends React.Component {
 
     render(){
       return (
-        <Fragment>
      <div className="song-container">
-       Top 20 Songs in Planet UK!
-       <Songlist data= {this.state.songs}
-       />
+       <h2>Top 20 Songs in Planet UK!</h2>
+       <Songlist songs={this.state.songs}/>
      </div>
-     </Fragment>
+
    );
     }
 

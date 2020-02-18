@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 
-const SongItem = (props) => {
-  if(!props.song) return null;
+const SongItem = ({song, index}) => {
+  
+  if(!song) return null;
+
   return (
-    <section>
+    <>
     <h3>
-    {props.song.title}
+    {song.title.label}
     </h3>
-    <p>Artist: {props.song.artist}</p>
-    </section>
+    <p>Rank: {index + 1}</p>
+    </>
   )
 }
 export default SongItem;

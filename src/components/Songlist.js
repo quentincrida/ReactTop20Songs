@@ -2,15 +2,17 @@ import React, {Fragment} from 'react';
 import SongItem from './SongItem';
 
 
-const Songlist = (props) =>{
-  const songs = props.data.map((song, index) => {
+const Songlist = ({songs}) =>{
+
+  const songsList = songs.map((song, index) => {
     return (
-      <SongItem title = {song.title.label} key={index}>{song.title}</SongItem>
+      <SongItem song={song} key={index} index={index} />
     )
   })
+
   return (
     <Fragment>
-    {songs}
+    {songsList}
     </Fragment>
   )
 
